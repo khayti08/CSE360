@@ -9,42 +9,58 @@ package cse360assign2;
 
 public class Calculator {
 private int total;
-	
-	public Calculator () {
+private String history = "0";
+	public Calculator () 
+	{
 		total = 0;  // not needed - included for clarity
 	}
 	
-	public int getTotal () {
+	public int getTotal () //returns total before any functions are called
+	{  
 		return 0;
 	}
 	
-	public void add (int value) {
+	public  void add (int value)  //adds a value to the total
+	{ 
 		total += value;
+		history += "+"  + value;
+	
 	}
 	
-	public void subtract (int value) {
+	public void subtract (int value)  //subtracts a value to the total
+	{    
 		total -= value;
+		history += "-"  + value;
 	}
 	
-	public void multiply (int value) {
+	public void multiply (int value) {  //multiplies a value to the total
 		total *= value;
+		history += "*"  + value;
 	}
 	
-	public void divide (int value) {
+	public void divide (int value) {    //divides a value to the total
 	
-		if ( value != 0) {
+		if ( value != 0)   //checks to see if the value entered is 0 or not
+		{    
 			total /= value;
+			
 		}
 		
-		else {
+		else 
+		{
 			total = 0;
 		}
 		
-	
+		history += "/"  + value;
 	}
 	
-	public String getHistory () {
-		return "";
+	public String getHistory () {    //returns the history 
+		return history;
 	}
 
+
+
+
+
 }
+
