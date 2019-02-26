@@ -19,19 +19,28 @@ private int total;
 	}
 	
 	public void add (int value) {
-		
+		total += value;
 	}
 	
 	public void subtract (int value) {
-		
+		total -= value;
 	}
 	
 	public void multiply (int value) {
-		
+		total *= value;
 	}
 	
 	public void divide (int value) {
+	
+		if ( value != 0) {
+			total /= value;
+		}
 		
+		else {
+			total = 0;
+		}
+		
+	
 	}
 	
 	public String getHistory () {
